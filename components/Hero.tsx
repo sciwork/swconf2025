@@ -22,12 +22,13 @@ const Hero = () => {
 
   return (
     <div className="tw:w-screen tw:bg-gradient-to-b tw:from-rose-100 tw:to-white">
-      <div className="tw:relative tw:w-full">
+      <div className="tw:relative tw:w-full tw:overflow-hidden">
         <video
           autoPlay
           loop
+          playsInline
           muted
-          className="tw:relative tw:z-0 tw:min-h-full tw:w-auto tw:max-w-none tw:min-w-full tw:overflow-hidden"
+          className="tw:relative tw:z-0 tw:min-h-full tw:w-auto tw:max-w-none tw:min-w-full"
         >
           <source src="/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
