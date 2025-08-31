@@ -37,13 +37,13 @@ export async function generateMetadata() {
       description: "science, code, and open source.",
       url: process.env.SITEURL,
       siteName: "sciwork 2025",
-      images: [
-        {
-          url: "/sw24_meta_img.png",
-          width: 1024,
-          height: 1024,
-        },
-      ],
+      // images: [
+      //   {
+      //     url: "/sw24_meta_img.png",
+      //     width: 1024,
+      //     height: 1024,
+      //   },
+      // ],
       locale: "en_US",
       type: "website",
     },
@@ -51,7 +51,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title: "sciwork 2025",
       description: "science, code, and open source.",
-      images: ["/sw23_meta_img.jpg"],
+      // images: ["/sw23_meta_img.jpg"],
     },
     icons: {
       icon: [
