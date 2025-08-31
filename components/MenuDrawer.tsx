@@ -34,6 +34,9 @@ const MobileNavigator = () => {
             <p className="tw:px-6 tw:font-medium tw:leading-loose tw:font-yk tw:text-gray-400">
               Previous Conference
             </p>
+            <DrawerLink to="https://conf2024.sciwork.dev/" secondary is_blank>
+              sciwork 2024
+            </DrawerLink>
             <DrawerLink to="https://conf2023.sciwork.dev/" secondary is_blank>
               sciwork 2023
             </DrawerLink>

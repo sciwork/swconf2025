@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import NextLink from "next/link";
 
 const DrawerLink = ({
@@ -17,10 +18,13 @@ const DrawerLink = ({
       target={props.is_blank ? "_blank" : "_self"}
     >
       <div
-        className={
-          (props.secondary ? "tw:text-gray-400" : "tw:text-black") +
-          " tw:px-7 tw:py-2 tw:text-2xl tw:font-medium tw:leading-loose hover:tw:text-sky-400"
-        }
+        className={clsx(
+          "tw:px-7 tw:py-2 tw:text-2xl tw:font-medium tw:hover:text-sky-400",
+          {
+            "tw:leading-none tw:text-gray-400": props.secondary,
+            "tw:leading-loose tw:text-black": !props.secondary,
+          },
+        )}
       >
         {children}
       </div>
