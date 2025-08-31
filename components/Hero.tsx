@@ -34,7 +34,7 @@ const Hero = () => {
           <source src="/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <div className="lg:tw:pt-20 tw:absolute tw:inset-0 tw:z-1 tw:flex tw:flex-col tw:bg-linear-to-b tw:from-transparent tw:to-white tw:px-8 tw:pt-5 tw:pb-10">
+        <div className="tw:absolute tw:inset-0 tw:z-1 tw:flex tw:flex-col tw:bg-linear-to-b tw:from-transparent tw:to-white tw:px-8 tw:pt-5 tw:pb-10 tw:lg:pt-20">
           <div className="tw:flex tw:w-full tw:justify-between tw:px-5 tw:pt-8 tw:pb-14">
             <div className="tw:flex">
               <SocialLink icon={faDiscord} to="https://discord.gg/6MAkFrD" />

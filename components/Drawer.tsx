@@ -28,16 +28,16 @@ const Drawer = ({ show, onClick, children }: Props) => {
         as="div"
         className={clsx(
           "tw:fixed tw:inset-0 tw:z-10 tw:bg-black tw:opacity-50 tw:transition-opacity tw:duration-300 tw:ease-linear",
-          "data-[closed]:tw:opacity-0",
+          "tw:data-[closed]:opacity-0",
         )}
         onClick={onClick}
       />
       <TransitionChild
         as="div"
         className={clsx(
-          "tw:fixed tw:right-0 tw:top-0 tw:z-50 tw:h-screen tw:min-w-[300px] tw:rounded-l-3xl tw:bg-white tw:shadow-xl",
+          "tw:fixed tw:top-0 tw:right-0 tw:z-50 tw:h-screen tw:min-w-[300px] tw:rounded-l-3xl tw:bg-white tw:shadow-xl",
           "tw:translate-x-0 tw:transform tw:transition tw:duration-300 tw:ease-in-out",
-          "data-[closed]:tw:translate-x-full",
+          "tw:data-[closed]:translate-x-full",
         )}
       >
         {children}

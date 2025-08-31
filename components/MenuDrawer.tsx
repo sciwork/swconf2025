@@ -15,9 +15,9 @@ const MobileNavigator = () => {
     <>
       <Button onClick={toggleMenu}>Menu</Button>
       <Drawer show={isMenuOpen} onClick={toggleMenu}>
-        <div className="tw:flex tw:flex-col tw:h-screen">
+        <div className="tw:flex tw:h-screen tw:flex-col">
           <div className="tw:grow">
-            <div className="tw:px-6 tw:pb-4 tw:pt-8" onClick={toggleMenu}>
+            <div className="tw:px-6 tw:pt-8 tw:pb-4" onClick={toggleMenu}>
               <Logo variant="light" />
             </div>
             <div onClick={toggleMenu}>
@@ -30,8 +30,8 @@ const MobileNavigator = () => {
                 ))}
             </div>
           </div>
-          <div className="tw:pt-6 tw:pb-10 tw:border-t tw:border-t-gray-200">
-            <p className="tw:px-6 tw:font-medium tw:leading-loose tw:font-yk tw:text-gray-400">
+          <div className="tw:border-t tw:border-t-gray-200 tw:pt-6 tw:pb-10">
+            <p className="tw:px-6 tw:font-yk tw:leading-loose tw:font-medium tw:text-gray-400">
               Previous Conference
             </p>
             <DrawerLink to="https://conf2024.sciwork.dev/" secondary is_blank>
