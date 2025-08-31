@@ -15,8 +15,9 @@ import MobileNavigator from "@/components/MenuDrawer";
 import iconImg from "@/assets/android-chrome-192x192.png";
 
 const Hero = () => {
-  const hasOtherPages =
-    routes.filter((route) => !route.disabled && route.path !== "/").length > 0;
+  // const hasOtherPages =
+  //   routes.filter((route) => !route.disabled && route.path !== "/").length > 0;
+  const hasOtherPages = true;
   const eventDate = new Date("2024-12-14T00:00:00+08:00");
   const currentDate = new Date();
 
