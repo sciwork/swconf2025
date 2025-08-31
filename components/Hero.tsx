@@ -22,7 +22,7 @@ const Hero = () => {
   const currentDate = new Date();
 
   return (
-    <div className="tw:w-screen tw:bg-gradient-to-b tw:from-rose-100 tw:to-white">
+    <div className="tw:w-screen">
       <div className="tw:relative tw:w-full tw:overflow-hidden">
         <video
           autoPlay
