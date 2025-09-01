@@ -68,7 +68,7 @@ const Hero = () => {
               December
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
-              National Taiwan University
+              North Taiwan
             </div>
             {currentDate < eventDate && (
               <div className="tw:flex tw:pt-5">
