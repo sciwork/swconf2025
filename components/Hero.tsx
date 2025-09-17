@@ -64,7 +64,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
-              December
+              December 13 - 14, 2025
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
               North Taiwan
