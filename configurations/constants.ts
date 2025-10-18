@@ -5,3 +5,5 @@ export const REGISTER_URL = "https://sciwork.kktix.cc/events/sciwork-conf2025";
 export const CFP_URL = "https://pretalx.sciwork.dev/sw25/submit";
 export const SCHEDULE_URL =
   "https://pretalx.sciwork.dev/sw25/schedule/export/schedule.json";
+export type CookieConsentValue = "accepted" | "rejected" | undefined;
+export const COOKIE_NAME = "cookieConsent";
