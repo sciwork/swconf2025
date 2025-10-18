@@ -4,6 +4,8 @@ import { Inter, Yanone_Kaffeesatz } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Hero from "@/components/Hero";
+import CookieBanner from "@/components/CookieBanner";
+import AnalyticsInitializer from "@/components/AnalyticsInitializer";
 import LocaleProvider from "@/contexts/locale";
 import "./globals.css";
 
@@ -88,12 +90,14 @@ export default function RootLayout({
           yanone.variable,
         )}
       >
+        <AnalyticsInitializer />
         <LocaleProvider>
           <header className="tw:mb-4">
             <Hero />
           </header>
           <main className="tw:grow">{children}</main>
           <div id="portal" />
+          <CookieBanner />
         </LocaleProvider>
       </body>
     </html>

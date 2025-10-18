@@ -5,3 +5,5 @@ export const REGISTER_URL =
   'https://sciwork.kktix.cc/events/sciwork-conference-20251213-ntu';
 export const CFP_URL =
   'https://pretalx.sciwork.dev/sw25/submit';
+export type CookieConsentValue = 'accepted' | 'rejected' | undefined;
+export const COOKIE_NAME = 'cookieConsent';
