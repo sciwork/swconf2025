@@ -17,8 +17,6 @@ import iconImg from "@/assets/android-chrome-192x192.png";
 const Hero = () => {
   const hasOtherPages =
     routes.filter((route) => !route.disabled && route.path !== "/").length > 0;
-  const cfpDeadline = new Date('2025-10-19T00:00:00-08:00');
-  const currentDate = new Date();
 
   return (
     <div className="tw:w-screen">
@@ -69,13 +67,16 @@ const Hero = () => {
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
               North Taiwan
             </div>
-            {currentDate < cfpDeadline && (
-              <div className="tw:flex tw:pt-5">
-                <Button variant="action" to={CFP_URL} target="_blank">
-                  Submit a Proposal
-                </Button>
-              </div>
-            )}
+             <div className="tw:flex tw:pt-5">
+              <Button
+                variant="action"
+                to={CFP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Submit a Proposal
+              </Button>
+            </div>
           </div>
         </div>
       </div>
