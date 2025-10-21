@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { CFP_URL } from "@/configurations/constants";
+import { CFP_URL, REGISTER_URL } from "@/configurations/constants";
 import routes from "@/configurations/routes";
 import Button from "@/components/Button";
 import SocialLink from "@/components/IconLink";
@@ -17,6 +17,8 @@ import iconImg from "@/assets/android-chrome-192x192.png";
 const Hero = () => {
   const hasOtherPages =
     routes.filter((route) => !route.disabled && route.path !== "/").length > 0;
+  const eventDate = new Date("2025-12-13T00:00:00-08:00");
+  const currentDate = new Date();
 
   return (
     <div className="tw:w-screen">
@@ -65,9 +67,9 @@ const Hero = () => {
               December 13 - 14, 2025
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
-              North Taiwan
+              National Taiwan University
             </div>
-             <div className="tw:flex tw:pt-5">
+            <div className="tw:flex tw:pt-5">
               <Button
                 variant="action"
                 to={CFP_URL}
@@ -77,6 +79,13 @@ const Hero = () => {
                 Submit a Proposal
               </Button>
             </div>
+            {currentDate < eventDate && (
+              <div className="tw:flex tw:pt-5">
+                <Button variant="default" to={REGISTER_URL} target="_blank">
+                  Sign up now!
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>
