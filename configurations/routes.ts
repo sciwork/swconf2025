@@ -9,6 +9,11 @@ const routes = [
     name: "Code of conduct",
     disabled: false,
   },
+  {
+    path: "/sponsor",
+    name: "Sponsor",
+    disabled: false,
+  },
 ];
 
 export default routes;
