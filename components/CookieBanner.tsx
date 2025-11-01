@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { getCookieConsent, setCookieConsent } from '@/components/cookieUtils'
+import { getCookieConsent, setCookieConsent } from '@/utils/cookieUtils'
+import Button from '@/components/Button'
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false)
@@ -41,18 +42,12 @@ export default function CookieBanner() {
             </p>
           </div>
           <div className="tw:flex tw:gap-3 tw:flex-wrap">
-            <button
-              onClick={handleReject}
-              className="tw:px-6 tw:py-2.5 tw:bg-gray-200 tw:text-gray-800 tw:rounded-full tw:font-semibold tw:text-base hover:tw:bg-gray-300 tw:transition-colors"
-            >
+            <Button variant="secondary" onClick={handleReject}>
               Reject All
-            </button>
-            <button
-              onClick={handleAccept}
-              className="tw:px-6 tw:py-2.5 tw:bg-rose-500 tw:text-white tw:rounded-full tw:font-semibold tw:text-base hover:tw:bg-rose-700 tw:transition-colors"
-            >
+            </Button>
+            <Button variant="default" onClick={handleAccept}>
               Accept All
-            </button>
+            </Button>
           </div>
         </div>
       </div>
