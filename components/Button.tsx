@@ -4,7 +4,7 @@ import { HTMLProps, MouseEvent } from "react";
 
 type Props = {
   className?: string;
-  variant?: "default" | "action";
+  variant?: "default" | "action"| "secondary";
   children: React.ReactNode;
   to?: string;
   onClick?: () => void;
@@ -44,6 +44,8 @@ const Button = ({
             variant === "default",
           "tw:bg-orange-400 tw:text-white tw:hover:bg-orange-600":
             variant === "action",
+          "tw:bg-gray-200 tw:text-gray-800 tw:hover:bg-gray-300":
+            variant === "secondary",
         },
       )}
       {...props}
