@@ -28,6 +28,7 @@ const Hero = () => {
           loop
           playsInline
           muted
+          preload="auto"
           className="tw:relative tw:z-0 tw:min-h-full tw:w-auto tw:max-w-none tw:min-w-full"
         >
           <source src="/hero.webm" type="video/webm" />
