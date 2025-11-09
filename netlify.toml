@@ -10,3 +10,9 @@
   from = "/register"
   to = "https://sciwork.kktix.cc/events/sciwork-conference-20241214-ntu"
   force = true
+
+[[headers]]
+  for = "*.webm"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Accept-Ranges = "none"
