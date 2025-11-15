@@ -7,7 +7,7 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { CFP_URL, REGISTER_URL } from "@/configurations/constants";
+import { REGISTER_URL } from "@/configurations/constants";
 import routes from "@/configurations/routes";
 import Button from "@/components/Button";
 import SocialLink from "@/components/IconLink";
@@ -68,16 +68,6 @@ const Hero = () => {
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
               National Taiwan University
-            </div>
-            <div className="tw:flex tw:pt-5">
-              <Button
-                variant="action"
-                to={CFP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Submit a Proposal
-              </Button>
             </div>
             {currentDate < eventDate && (
               <div className="tw:flex tw:pt-5">
