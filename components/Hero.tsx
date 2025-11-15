@@ -7,12 +7,11 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { CFP_URL, REGISTER_URL } from "@/configurations/constants";
 import routes from "@/configurations/routes";
 import Button from "@/components/Button";
 import SocialLink from "@/components/IconLink";
 import MobileNavigator from "@/components/MenuDrawer";
-import iconImg from "@/assets/android-chrome-192x192.png";
+import RegisterQrCodeImg from "@/assets/register-qrcode.png";
 
 const Hero = () => {
   const hasOtherPages =
@@ -57,31 +56,20 @@ const Hero = () => {
             )}
           </div>
           <div className="tw:flex tw:h-full tw:w-full tw:flex-col tw:items-center tw:justify-center">
-            <div className="tw:mb-6 tw:flex tw:flex-col tw:items-center tw:gap-4 tw:tablet:mb-8 tw:tablet:flex-row tw:tablet:gap-2">
-              <Image className="tw:size-12" src={iconImg} alt="sciwork icon" />
-              <div className="tw:font-yk tw:text-5xl tw:tablet:text-7xl">
-                sciwork conference
-              </div>
-            </div>
+            <Image
+              className="tw:mb-5 tw:size-40"
+              src={RegisterQrCodeImg}
+              alt="register conference qrcode"
+            />
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
               December 13 - 14, 2025
             </div>
             <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
               National Taiwan University
             </div>
-            <div className="tw:flex tw:pt-5">
-              <Button
-                variant="action"
-                to={CFP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Submit a Proposal
-              </Button>
-            </div>
             {currentDate < eventDate && (
               <div className="tw:flex tw:pt-5">
-                <Button variant="default" to={REGISTER_URL} target="_blank">
+                <Button variant="default" to="/register" target="_blank">
                   Sign up now!
                 </Button>
               </div>
