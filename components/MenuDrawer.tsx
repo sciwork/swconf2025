@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { REGISTER_URL } from "@/configurations/constants";
 import routes from "@/configurations/routes";
 import Button from "@/components/Button";
 import Drawer from "@/components/Drawer";
