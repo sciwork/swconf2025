@@ -61,7 +61,7 @@ const Hero = () => {
                 <Image
                   className="tw:size-40 tw:rounded-xl tw:object-cover tw:desktop:size-52"
                   src={RegisterQrCodeImg}
-                  alt="register conference qrcode"
+                  alt="powered by artcoder"
                 />
               </div>
               <div className="tw:text-center tw:text-slate-900">
