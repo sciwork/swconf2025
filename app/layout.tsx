@@ -37,13 +37,13 @@ export async function generateMetadata() {
       description: "science, code, and open source.",
       url: process.env.SITEURL,
       siteName: "sciwork 2025",
-      // images: [
-      //   {
-      //     url: "/sw24_meta_img.png",
-      //     width: 1024,
-      //     height: 1024,
-      //   },
-      // ],
+      images: [
+        {
+          url: "/sw25_meta_img.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
       locale: "en_US",
       type: "website",
     },
