@@ -10,6 +10,11 @@ const routes = [
     disabled: false,
   },
   {
+    path: "/tutorials",
+    name: "Tutorials",
+    disabled: false,
+  },
+  {
     path: "/sponsor",
     name: "Sponsor",
     disabled: false,
