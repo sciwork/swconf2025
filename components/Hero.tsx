@@ -57,9 +57,9 @@ const Hero = () => {
           </div>
           <div className="tw:flex tw:flex-col tw:items-center tw:justify-center tw:pb-20">
             <div className="tw:flex tw:max-w-sm tw:flex-col tw:items-center tw:gap-4 tw:rounded-3xl tw:bg-white/15 tw:p-6 tw:shadow-[0_24px_80px_rgba(46,16,101,0.1)] tw:ring-1 tw:ring-white/40 tw:backdrop-blur-2xl tw:tablet:max-w-md tw:tablet:gap-6 tw:tablet:p-8">
-              <div className="tw:rounded-2xl tw:bg-white/30 tw:p-2 tw:shadow-[0_16px_40px_rgba(140,60,200,0.45)] tw:ring-1 tw:ring-white/60 tw:tablet:p-3">
+              <div className="tw:rounded-md tw:bg-white/30 tw:p-2 tw:shadow-[0_16px_40px_rgba(140,60,200,0.45)] tw:ring-1 tw:ring-white/60 tw:tablet:p-3">
                 <Image
-                  className="tw:size-40 tw:rounded-xl tw:object-cover tw:desktop:size-52"
+                  className="tw:size-40 tw:rounded-md tw:object-cover tw:desktop:size-52"
                   src={RegisterQrCodeImg}
                   alt="powered by artcoder"
                 />
