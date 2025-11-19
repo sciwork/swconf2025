@@ -7,12 +7,11 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { REGISTER_URL } from "@/configurations/constants";
 import routes from "@/configurations/routes";
 import Button from "@/components/Button";
 import SocialLink from "@/components/IconLink";
 import MobileNavigator from "@/components/MenuDrawer";
-import iconImg from "@/assets/android-chrome-192x192.png";
+import RegisterQrCodeImg from "@/assets/register-qrcode.png";
 
 const Hero = () => {
   const hasOtherPages =
@@ -56,26 +55,31 @@ const Hero = () => {
               </div>
             )}
           </div>
-          <div className="tw:flex tw:h-full tw:w-full tw:flex-col tw:items-center tw:justify-center">
-            <div className="tw:mb-6 tw:flex tw:flex-col tw:items-center tw:gap-4 tw:tablet:mb-8 tw:tablet:flex-row tw:tablet:gap-2">
-              <Image className="tw:size-12" src={iconImg} alt="sciwork icon" />
-              <div className="tw:font-yk tw:text-5xl tw:tablet:text-7xl">
-                sciwork conference
+          <div className="tw:flex tw:flex-col tw:items-center tw:justify-center">
+            <div className="tw:flex tw:max-w-sm tw:flex-col tw:items-center tw:gap-4 tw:rounded-3xl tw:bg-white/15 tw:p-6 tw:shadow-[0_24px_80px_rgba(46,16,101,0.1)] tw:ring-1 tw:ring-white/40 tw:backdrop-blur-2xl tw:tablet:max-w-md tw:tablet:gap-6 tw:tablet:p-8">
+              <div className="tw:rounded-2xl tw:bg-white/30 tw:p-2 tw:shadow-[0_16px_40px_rgba(140,60,200,0.45)] tw:ring-1 tw:ring-white/60 tw:tablet:p-3">
+                <Image
+                  className="tw:size-40 tw:rounded-xl tw:object-cover tw:desktop:size-52"
+                  src={RegisterQrCodeImg}
+                  alt="powered by artcoder"
+                />
               </div>
-            </div>
-            <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
-              December 13 - 14, 2025
-            </div>
-            <div className="tw:font-yk tw:text-xl tw:tablet:text-3xl">
-              National Taiwan University
-            </div>
-            {currentDate < eventDate && (
-              <div className="tw:flex tw:pt-5">
-                <Button variant="default" to={REGISTER_URL} target="_blank">
-                  Sign up now!
-                </Button>
+              <div className="tw:text-center tw:text-slate-900">
+                <p className="tw:font-yk tw:text-xl tw:font-semibold tw:tracking-wide tw:tablet:text-3xl">
+                  December 13–14, 2025
+                </p>
+                <p className="tw:mt-1 tw:font-yk tw:text-lg tw:tablet:text-2xl">
+                  National Taiwan University
+                </p>
               </div>
-            )}
+              {currentDate < eventDate && (
+                <div className="tw:flex">
+                  <Button variant="default" to="/register" target="_blank">
+                    Sign up now!
+                  </Button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
