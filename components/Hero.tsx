@@ -27,12 +27,12 @@ const Hero = () => {
           loop
           playsInline
           muted
-          className="tw:relative tw:z-0 tw:min-h-full tw:w-auto tw:max-w-none tw:min-w-full"
+          className="tw:absolute tw:inset-0 tw:z-0 tw:min-h-full tw:w-auto tw:max-w-none tw:min-w-full tw:object-cover"
         >
           <source src="/hero.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        <div className="tw:absolute tw:inset-0 tw:z-1 tw:flex tw:flex-col tw:bg-linear-to-b tw:from-transparent tw:to-white tw:px-8 tw:pt-5 tw:pb-10 tw:lg:pt-20">
+        <div className="tw:relative tw:z-1 tw:flex tw:flex-col tw:bg-linear-to-b tw:from-transparent tw:to-white tw:px-8 tw:pt-5 tw:pb-10 tw:lg:pt-20">
           <div className="tw:flex tw:w-full tw:justify-between tw:px-5 tw:pt-8 tw:pb-14">
             <div className="tw:flex">
               <SocialLink icon={faDiscord} to="https://discord.gg/6MAkFrD" />
@@ -55,7 +55,7 @@ const Hero = () => {
               </div>
             )}
           </div>
-          <div className="tw:flex tw:flex-col tw:items-center tw:justify-center">
+          <div className="tw:flex tw:flex-col tw:items-center tw:justify-center tw:pb-20">
             <div className="tw:flex tw:max-w-sm tw:flex-col tw:items-center tw:gap-4 tw:rounded-3xl tw:bg-white/15 tw:p-6 tw:shadow-[0_24px_80px_rgba(46,16,101,0.1)] tw:ring-1 tw:ring-white/40 tw:backdrop-blur-2xl tw:tablet:max-w-md tw:tablet:gap-6 tw:tablet:p-8">
               <div className="tw:rounded-2xl tw:bg-white/30 tw:p-2 tw:shadow-[0_16px_40px_rgba(140,60,200,0.45)] tw:ring-1 tw:ring-white/60 tw:tablet:p-3">
                 <Image
