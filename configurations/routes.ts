@@ -5,8 +5,8 @@ const routes = [
     disabled: false,
   },
   {
-    path: "/tutorials",
-    name: "Tutorials",
+    path: "/workshops",
+    name: "Workshops",
     disabled: false,
   },
   {
