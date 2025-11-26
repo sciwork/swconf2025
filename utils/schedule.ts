@@ -1,10 +1,10 @@
-import { RoomTalkMapType, TalkType } from '@/models/Schedule';
-import dayjs from '@/utils/day';
+import { RoomTalkMapType, TalkType } from "@/models/Schedule";
+import dayjs from "@/utils/day";
 
 const duration = 30;
 
 const floorByDuration = (time: dayjs.Dayjs, d: number) => {
-  return time.subtract(time.minute() % d, 'minute');
+  return time.subtract(time.minute() % d, "minute");
 };
 
 export const getAggregatedTalksByTimeSlot = (roomTalks: RoomTalkMapType) => {
@@ -26,9 +26,12 @@ export const getAggregatedTalksByTimeSlot = (roomTalks: RoomTalkMapType) => {
 
   // to array
   const aggregatedTalks = Object.keys(aggregatedDateTalksMap).map((key) => {
+    const talks = aggregatedDateTalksMap[key].toSorted((a, b) =>
+      a.date.isBefore(b.date) ? -1 : 1,
+    );
     return {
-      date: dayjs(key),
-      talks: aggregatedDateTalksMap[key],
+      date: talks[0].date,
+      talks,
     };
   });
   // sort by date asc
