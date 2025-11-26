@@ -43,7 +43,11 @@ const Schedule = ({ days, currentDay }: Props) => {
               })}
             >
               {timeSlot.talks.map((talk) => (
-                <TalkInfoCard key={talk.id} variant="general" talk={talk} />
+                <TalkInfoCard
+                  key={talk.id}
+                  variant={talk.type === "Non-talk" ? "general" : "booths"}
+                  talk={talk}
+                />
               ))}
             </div>
           </Fragment>
