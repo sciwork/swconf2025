@@ -1,5 +1,10 @@
 const routes = [
   {
+    path: "/program",
+    name: "Program",
+    disabled: false,
+  },
+  {
     path: "/code-of-conduct",
     name: "Code of conduct",
     disabled: false,

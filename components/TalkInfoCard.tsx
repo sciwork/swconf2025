@@ -1,4 +1,6 @@
 import clsx from "clsx";
+import Button from "@/components/Button";
+import { TalkType } from "@/models/Schedule";
 
 type SimpleTalkType = {
   title: string;
@@ -12,7 +14,7 @@ type SimpleTalkType = {
 type Props = {
   className?: string;
   variant: "general" | "talks" | "training" | "booths";
-  talk: SimpleTalkType;
+  talk: TalkType;
 };
 
 const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
@@ -31,7 +33,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
       <div className="tw:mb-1 tw:flex tw:flex-wrap tw:items-center tw:gap-2">
         <div
           className={clsx(
-            "tw:font-yk tw:text-2xl tw:font-medium tw:leading-none",
+            "tw:font-yk tw:text-2xl tw:leading-none tw:font-medium",
             variant === "general" && "tw:text-rose-800",
             variant === "talks" && "tw:text-indigo-800",
             variant === "training" && "tw:text-purple-800",
@@ -43,7 +45,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         {talk.room && (
           <div
             className={clsx(
-              "-tw:mt-1 tw:rounded-lg tw:border tw:px-1.5 tw:py-1 tw:text-xs tw:uppercase",
+              "tw:-mt-1 tw:rounded-lg tw:border tw:px-1.5 tw:py-1 tw:text-xs tw:uppercase",
               variant === "general" &&
                 "tw:border-rose-500 tw:bg-rose-100 tw:text-rose-700",
               variant === "talks" &&
@@ -67,7 +69,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           variant === "booths" && "tw:text-pink-600",
         )}
       >
-        {talk?.persons?.map((person) => person).join(", ")}
+        {talk?.persons?.map((person) => person.publicName).join(", ")}
       </div>
       <div
         className={clsx(
@@ -78,21 +80,26 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           variant === "booths" && "tw:text-pink-400",
         )}
       >
-        {talk.start} - {talk.end}
+        {talk.start.format("HH:mm")} - {talk.end.format("HH:mm")}
       </div>
-      {talk.description && (
+      {talk.abstract && (
         <div
           className={clsx(
-            "tw:mt-2 tw:tablet:mt-4",
+            "tw:mt-2 tw:line-clamp-3 tw:tablet:mt-4",
             variant === "general" && "tw:text-rose-700",
             variant === "talks" && "tw:text-indigo-700",
             variant === "training" && "tw:text-purple-700",
             variant === "booths" && "tw:text-pink-700",
           )}
         >
-          {talk.description}
+          {talk.abstract}
         </div>
       )}
+      <div className="tw:mt-4">
+        <Button btnSize="small" to={talk.url} target="_blank">
+          More
+        </Button>
+      </div>
     </div>
   );
 };

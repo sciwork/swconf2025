@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { Viewport } from "next";
 import { Inter, Yanone_Kaffeesatz } from "next/font/google";
+import { Suspense } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Hero from "@/components/Hero";
@@ -92,7 +93,9 @@ export default function RootLayout({
           <header className="tw:mb-4">
             <Hero />
           </header>
-          <main className="tw:grow">{children}</main>
+          <main className="tw:grow">
+            <Suspense>{children}</Suspense>
+          </main>
           <div id="portal" />
         </LocaleProvider>
       </body>

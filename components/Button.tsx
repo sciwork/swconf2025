@@ -5,6 +5,7 @@ import { HTMLProps, MouseEvent } from "react";
 type Props = {
   className?: string;
   variant?: "default" | "action";
+  btnSize?: "medium" | "small";
   children: React.ReactNode;
   to?: string;
   onClick?: () => void;
@@ -13,6 +14,7 @@ type Props = {
 const Button = ({
   className,
   variant = "default",
+  btnSize = "medium",
   children,
   to,
   onClick,
@@ -37,13 +39,15 @@ const Button = ({
   return (
     <Component
       className={clsx(
-        "tw:rounded-full tw:px-4 tw:py-1 tw:text-base tw:font-bold tw:no-underline tw:outline-none tw:focus:ring-2",
+        "tw:rounded-full tw:px-4 tw:py-1 tw:font-bold tw:no-underline tw:outline-none tw:focus:ring-2",
         className,
         {
           "tw:bg-rose-500 tw:text-white tw:hover:bg-rose-700":
             variant === "default",
           "tw:bg-orange-400 tw:text-white tw:hover:bg-orange-600":
             variant === "action",
+          "tw:px-4 tw:py-1 tw:text-base": btnSize === "medium",
+          "tw:p-1 tw:text-xs": btnSize === "small",
         },
       )}
       {...props}
