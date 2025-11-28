@@ -5,11 +5,6 @@ const routes = [
     disabled: false,
   },
   {
-    path: "/code-of-conduct",
-    name: "Code of conduct",
-    disabled: false,
-  },
-  {
     path: "/workshops",
     name: "Workshops",
     disabled: false,
@@ -27,8 +22,40 @@ const routes = [
     ],
   },
   {
+    path: "/projects",
+    name: "Projects",
+    disabled: false,
+    children: [
+      {
+        path: "/projects#modmesh",
+        name: "modmesh",
+        disabled: false,
+      },
+      {
+        path: "/projects#python-official-document-translation",
+        name: "Python Official Document Translation",
+        disabled: false,
+      },
+      {
+        path: "/projects#sciwork-portal",
+        name: "sciwork Portal",
+        disabled: false,
+      },
+      {
+        path: "/projects#utensor",
+        name: "uTensor",
+        disabled: false,
+      },
+    ],
+  },
+  {
     path: "/sponsor",
     name: "Sponsor",
+    disabled: false,
+  },
+  {
+    path: "/code-of-conduct",
+    name: "Code of conduct",
     disabled: false,
   },
 ];

@@ -9,8 +9,15 @@ import Logo from "@/components/Logo";
 
 const MobileNavigator = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openWorkshops, setOpenWorkshops] = useState(false);
+    const [openMap, setOpenMap] = useState<Record<string, boolean>>({});
+
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+    const toggleParent = (path: string) => {
+      setOpenMap((prev) => ({ ...prev, [path]: !prev[path] }));
+    };
+    const closeParent = (path: string) => {
+      setOpenMap((prev) => ({ ...prev, [path]: false }));
+    };
   return (
     <>
       <Button onClick={toggleMenu}>Menu</Button>
@@ -24,16 +31,16 @@ const MobileNavigator = () => {
               {routes
                 .filter((route) => !route.disabled)
                 .map((route) => {
-                  // if route has children (like /workshops) render as an expandable button
                   if (route.children && route.children.length > 0) {
+                    const isOpen = !!openMap[route.path];
                     return (
                       <div key={route.path}>
                          <button
                            type="button"
-                           className="tw-w-full tw-text-left tw:block tw:font-yk"
+                           className="tw-w-full tw-text-left tw:block tw:font-yk tw:py-2"
                            onClick={(e) => {
                              e.stopPropagation();
-                             setOpenWorkshops((prev) => !prev);
+                             toggleParent(route.path);
                            }}
                          >
                            <div className="tw:px-7 tw:py-2 tw:text-2xl tw:font-medium tw:hover:text-sky-400 tw-leading-loose tw:text-black">
@@ -41,7 +48,7 @@ const MobileNavigator = () => {
                            </div>
                          </button>
 
-                        {openWorkshops && (
+                        {isOpen && (
                           <div className="tw-pl-6 tw-pt-2">
                             {route.children.map((child) => (
                               <DrawerLink
@@ -50,7 +57,7 @@ const MobileNavigator = () => {
                                 secondary
                                 onClick={() => {
                                   setIsMenuOpen(false);
-                                  setOpenWorkshops(false);
+                                  closeParent(route.path);
                                 }}
                               >
                                 <span className="tw:px-8 tw:font-yk tw:leading-tight tw:font-normal tw:text-base tw:text-gray-400">
