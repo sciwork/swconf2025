@@ -9,6 +9,7 @@ import Logo from "@/components/Logo";
 
 const MobileNavigator = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openWorkshops, setOpenWorkshops] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   return (
     <>
@@ -19,14 +20,60 @@ const MobileNavigator = () => {
             <div className="tw:px-6 tw:pt-8 tw:pb-4" onClick={toggleMenu}>
               <Logo variant="light" />
             </div>
-            <div onClick={toggleMenu}>
+            <div>
               {routes
                 .filter((route) => !route.disabled)
-                .map((route) => (
-                  <DrawerLink key={route.path} to={route.path}>
-                    {route.name}
-                  </DrawerLink>
-                ))}
+                .map((route) => {
+                  // if route has children (like /workshops) render as an expandable button
+                  if (route.children && route.children.length > 0) {
+                    return (
+                      <div key={route.path}>
+                         <button
+                           type="button"
+                           className="tw-w-full tw-text-left tw:block tw:font-yk"
+                           onClick={(e) => {
+                             e.stopPropagation();
+                             setOpenWorkshops((prev) => !prev);
+                           }}
+                         >
+                           <div className="tw:px-7 tw:py-2 tw:text-2xl tw:font-medium tw:hover:text-sky-400 tw-leading-loose tw:text-black">
+                             {route.name}
+                           </div>
+                         </button>
+
+                        {openWorkshops && (
+                          <div className="tw-pl-6 tw-pt-2">
+                            {route.children.map((child) => (
+                              <DrawerLink
+                                key={child.path}
+                                to={child.path}
+                                secondary
+                                onClick={() => {
+                                  setIsMenuOpen(false);
+                                  setOpenWorkshops(false);
+                                }}
+                              >
+                                <span className="tw:px-8 tw:font-yk tw:leading-tight tw:font-normal tw:text-base tw:text-gray-400">
+                                  {child.name}
+                                </span>
+                              </DrawerLink>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <DrawerLink
+                      key={route.path}
+                      to={route.path}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {route.name}
+                    </DrawerLink>
+                  );
+                })}
             </div>
           </div>
           <div className="tw:border-t tw:border-t-gray-200 tw:pt-6 tw:pb-10">

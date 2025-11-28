@@ -4,18 +4,21 @@ import NextLink from "next/link";
 const DrawerLink = ({
   children,
   to,
+  onClick,
   ...props
 }: {
   children: React.ReactNode;
   to: string;
   secondary?: boolean;
   is_blank?: boolean;
+  onClick?: (e?: React.MouseEvent) => void;
 }) => {
   return (
     <NextLink
       className="tw:block tw:w-full tw:font-yk"
       href={to}
       target={props.is_blank ? "_blank" : "_self"}
+      onClick={onClick}
     >
       <div
         className={clsx(
