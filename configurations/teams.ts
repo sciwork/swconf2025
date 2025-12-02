@@ -1,24 +1,4 @@
-import { StaticImageData } from 'next/image';
-import chesterImg from '@/assets/sw25-staff-avatar/chester.png';
-import ChunYuTsengImg from '@/assets/sw25-staff-avatar/chun-yu-tseng.jpg';
-import enImg from '@/assets/sw25-staff-avatar/en.jpeg';
-import enzoImg from '@/assets/sw25-staff-avatar/enzo.jpeg';
-import liAnChenImg from '@/assets/sw25-staff-avatar/li-an-chen.jpg';
-import liangBoWangImg from '@/assets/sw25-staff-avatar/liang-bo-wang.jpg';
-import liliImg from '@/assets/sw25-staff-avatar/lili.jpg';
-import manusnKuoImg from '@/assets/sw25-staff-avatar/manusn-kuo.jpg';
-import marsImg from '@/assets/sw25-staff-avatar/mars.jpg';
-import peterWolfImg from '@/assets/sw25-staff-avatar/peter-wolf.png';
-import shuhsiLinImg from '@/assets/sw25-staff-avatar/shuhsi-lin.jpg';
-import timHsuImg from '@/assets/sw25-staff-avatar/tim-hsu.jpeg';
-import wuxianImg from '@/assets/sw25-staff-avatar/wuxian.png';
-import yycImg from '@/assets/sw25-staff-avatar/yyc.jpeg';
-import jennyImg from '@/assets/sw25-staff-avatar/jenny.jpeg';
-import yuHsunLeeImg from '@/assets/sw25-staff-avatar/yu-hsun-lee.jpeg';
-import zonghanxieImg from '@/assets/sw25-staff-avatar/zonghanxie.jpeg';
-import yukoImg from '@/assets/sw25-staff-avatar/yuko.jpeg';
-import mingJieImg from '@/assets/sw25-staff-avatar/ming-jie.jpg';
-import steveImg from '@/assets/sw25-staff-avatar/steve.jpg';
+import { StaticImageData } from "next/image";
 
 type TeamType = {
   title: string;
@@ -33,117 +13,83 @@ type MemberProps = {
 
 const teams: TeamType[] = [
   {
-    title: 'Core Team',
+    title: "Core",
     members: [
-      {
-        name: 'Yung-Yu Chen',
-        email: 'yyc@sciwork.dev',
-        image: yycImg,
-      },
-      {
-        name: 'Shu-Hsi Lin',
-        email: 'suci@sciwork.dev',
-        image: shuhsiLinImg,
-      },
-      {
-        name: 'Robert Lin',
-        email: 'rlin@sciwork.dev',
-      },
-      {
-        name: 'Chester Cheng',
-        email: 'chester@sciwork.dev',
-        image: chesterImg,
-      },
-      {
-        name: 'Jenny Yen',
-        email: 'jennyyen@sciwork.dev',
-        image: jennyImg,
-      },
+      { name: "Chun-Hsu" },
+      { name: "Kuan-Hsien" },
+      { name: "Yung-Yu" },
     ],
   },
   {
-    title: 'Program',
+    title: "Finance & Venue",
     members: [
-      { name: 'Shu-Hsi Lin', image: shuhsiLinImg },
-      { name: 'Yu-Hsun Lee', image: yuHsunLeeImg },
-      { name: 'Zong-han Xie', image: zonghanxieImg },
-      { name: 'Huei-Yuan Su (Mars)', image: marsImg },
-      {
-        name: 'Li-An Chen',
-        image: liAnChenImg,
-      },
+      { name: "Chun-Hsu" },
+      { name: "Li-hung" },
+      { name: "Vera" },
+      { name: "Yung-Yu" },
     ],
   },
   {
-    title: 'Reviewer',
+    title: "Website",
     members: [
-      { name: 'Yung-Yu Chen', image: yycImg },
-      { name: 'Shu-Hsi Lin', image: shuhsiLinImg },
-      { name: 'Yu-Hsun Lee', image: yuHsunLeeImg },
-      { name: 'Zong-Han Xie', image: zonghanxieImg },
-      { name: 'Huei-Yuan Su (Mars)', image: marsImg },
-      {
-        name: 'Li-An Chen',
-        image: liAnChenImg,
-      },
-      { name: 'Liang-Bo Wang', image: liangBoWangImg },
-      { name: 'Kunxian Huang' },
-      {
-        name: 'Wen-Chung Hsu (Tim)',
-        image: timHsuImg,
-      },
-      { name: 'Chun-Yu Tseng (Joe)', image: ChunYuTsengImg },
-      {
-        name: 'Wang Wen-jet (Peter. w)',
-        image: peterWolfImg,
-      },
-      { name: 'Alyssa Chen' },
-      {
-        name: 'Chung-Pu Chang (Enzo)',
-        image: enzoImg,
-      },
-      {
-        name: 'Mansun Kuo',
-        image: manusnKuoImg,
-      },
-      { name: 'Chia-Liang Kao' },
-      { name: 'Edward Hong' },
-      { name: 'Carter Lin' },
-      { name: 'Rendy Kuo' },
-      { name: 'Li-Ho Hsu (Daren)' },
+      { name: "Chester" },
+      { name: "Wu-Xian" },
+      { name: "Steve" },
+      { name: "Jie-Yin" },
     ],
   },
   {
-    title: 'Web & Design',
+    title: "Registration",
+    members: [{ name: "Jie-Yin" }],
+  },
+  {
+    title: "Program",
     members: [
-      { name: 'Chaster Cheng', image: chesterImg },
-      { name: 'Wuxian', image: wuxianImg },
-      { name: 'Lili', image: liliImg },
-      { name: 'Steve', image: steveImg },
-      { name: 'tN' },
-      { name: 'EN', image: enImg },
+      { name: "Chun-Shih" },
+      { name: "Han-Xuan" },
+      { name: "Po-Chi" },
+      { name: "Suci" },
     ],
   },
   {
-    title: 'Finance & Venue',
+    title: "Reviewer",
     members: [
-      { name: 'Robert' },
-      { name: 'Jenny', image: jennyImg },
-      { name: 'Shanyen' },
-      { name: 'Vera' },
+      { name: "yyc" },
+      { name: "dboy" },
+      { name: "khlee" },
+      { name: "俊旭" },
+      { name: "chester" },
+      { name: "suci" },
+      { name: "chun shih" },
+      { name: "terry" },
+      { name: "gene" },
+      { name: "zong han" },
+      { name: "Steve" },
+      { name: "Peter" },
+      { name: "石恩" },
     ],
   },
   {
-    title: 'Registration',
-    members: [{ name: 'Ming-Jie', image: mingJieImg }],
+    title: "Promotion",
+    members: [
+      { name: "Joyce" },
+      { name: "Jenny" },
+      { name: "Zhong-Han" },
+      { name: "Artin" },
+      { name: "Jie-Yin" },
+    ],
   },
   {
-    title: 'Venue',
+    title: "Venue (Logistics)",
     members: [
-      { name: 'Terry' },
-      { name: 'Yu-Fang(Yuko) Hu', image: yukoImg },
-      { name: 'Rex' },
-      { name: 'Ting-Yu' },
+      { name: "Li-Hung" },
+      { name: "Terry" },
+      { name: "Yu-Fang" },
+      { name: "Hao-Ti" },
+      { name: "Kun-Xian" },
+      { name: "Chun-Li" },
+      { name: "暐宣" },
+      { name: "En Shih（石恩）" },
     ],
   },
 ];
