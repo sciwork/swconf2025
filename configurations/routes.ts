@@ -59,6 +59,11 @@ const routes = [
     disabled: false,
   },
   {
+    path: "/about",
+    name: "Team",
+    disabled: false,
+  },
+  {
     path: "/code-of-conduct",
     name: "Code of conduct",
     disabled: false,
