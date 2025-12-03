@@ -54,13 +54,13 @@ const routes = [
     disabled: false,
   },
   {
-    path: "/code-of-conduct",
-    name: "Code of conduct",
+    path: "/about",
+    name: "Team",
     disabled: false,
   },
   {
-    path: "/about",
-    name: "Team",
+    path: "/code-of-conduct",
+    name: "Code of conduct",
     disabled: false,
   },
 ];
