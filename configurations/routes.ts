@@ -46,6 +46,11 @@ const routes = [
         name: "uTensor",
         disabled: false,
       },
+      {
+        path: "/projects#cytnx",
+        name: "Cytnx",
+        disabled: false,
+      },
     ],
   },
   {
