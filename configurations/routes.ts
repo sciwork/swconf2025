@@ -59,6 +59,11 @@ const routes = [
     disabled: false,
   },
   {
+    path: "/venue",
+    name: "Venue",
+    disabled: false,
+  },
+  {
     path: "/about",
     name: "Team",
     disabled: false,
