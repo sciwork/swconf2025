@@ -59,13 +59,13 @@ const routes = [
     disabled: false,
   },
   {
-    path: "/about",
-    name: "Team",
+    path: "/venue",
+    name: "Venue",
     disabled: false,
   },
   {
-    path: "/venue",
-    name: "Venue",
+    path: "/about",
+    name: "Team",
     disabled: false,
   },
   {
