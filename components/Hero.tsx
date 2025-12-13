@@ -16,7 +16,7 @@ import RegisterQrCodeImg from "@/assets/register-qrcode.png";
 const Hero = () => {
   const hasOtherPages =
     routes.filter((route) => !route.disabled && route.path !== "/").length > 0;
-  const eventDate = new Date("2025-12-13T00:00:00-08:00");
+  const eventDate = new Date("2025-12-13T00:00:00+08:00");
   const currentDate = new Date();
 
   return (
