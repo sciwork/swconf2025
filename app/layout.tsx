@@ -4,9 +4,8 @@ import { Inter, Yanone_Kaffeesatz } from "next/font/google";
 import { Suspense } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Hero from "@/components/Hero";
 import CookieBanner from "@/components/CookieBanner";
-import AnalyticsInitializer from "@/components/AnalyticsInitializer";
+import Hero from "@/components/Hero";
 import LocaleProvider from "@/contexts/locale";
 import "./globals.css";
 
@@ -91,7 +90,6 @@ export default function RootLayout({
           yanone.variable,
         )}
       >
-        <AnalyticsInitializer />
         <LocaleProvider>
           <header className="tw:mb-4">
             <Hero />
