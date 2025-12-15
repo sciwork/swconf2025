@@ -21,6 +21,7 @@ import HanXuanImg from '@/assets/swconf25_team_avatar/HanXuan.jpg';
 import RobertImg from '@/assets/swconf25_team_avatar/Robert.png';
 import ZongHanImg from '@/assets/swconf25_team_avatar/Zonghan.jpg';
 import ShuHsiImg from '@/assets/swconf25_team_avatar/ShuHsi.png';
+import WeiSyuanImg from '@/assets/swconf25_team_avatar/WeiSyuan.jpeg';
 
 type TeamType = {
   title: string;
@@ -112,7 +113,7 @@ const teams: TeamType[] = [
       { name: "Hao-Ti" },
       { name: "Kun-Xian" },
       { name: "Jun-Li", image: JunLiImg },
-      { name: "Wei-Syuan" },
+      { name: "Wei-Syuan", image: WeiSyuanImg },
       { name: "En Shih", image: ShihEnImg },
     ],
   },
