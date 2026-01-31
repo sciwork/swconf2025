@@ -4,6 +4,7 @@ import { Inter, Yanone_Kaffeesatz } from "next/font/google";
 import { Suspense } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import CookieBanner from "@/components/CookieBanner";
 import Hero from "@/components/Hero";
 import LocaleProvider from "@/contexts/locale";
 import "./globals.css";
@@ -97,6 +98,7 @@ export default function RootLayout({
             <Suspense>{children}</Suspense>
           </main>
           <div id="portal" />
+          <CookieBanner />
         </LocaleProvider>
       </body>
     </html>
