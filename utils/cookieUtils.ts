@@ -46,15 +46,12 @@ export const hasCookieConsent = (): boolean => {
 export const deleteCookieConsent = (): void => {
   Cookies.remove(COOKIE_NAME);
   disableAnalytics();
-  console.log('🗑️ Cookie consent deleted');
 };
 
 /**
  * Enable analytics and tracking
  */
 export const enableAnalytics = (): void => {
-  console.log('✅ Analytics ENABLED');
-
   // Google Analytics (gtag.js)
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('consent', 'update', {
@@ -63,7 +60,6 @@ export const enableAnalytics = (): void => {
       ad_user_data: 'granted',
       ad_personalization: 'granted',
     });
-    console.log('✅ Google Analytics consent granted');
   }
 
   // Google Tag Manager
@@ -71,7 +67,6 @@ export const enableAnalytics = (): void => {
     (window as any).dataLayer.push({
       event: 'cookie_consent_granted',
     });
-    console.log('✅ GTM event pushed');
   }
 
   // Add other analytics services here
@@ -82,8 +77,6 @@ export const enableAnalytics = (): void => {
  * Disable analytics and tracking
  */
 export const disableAnalytics = (): void => {
-  console.log('❌ Analytics DISABLED');
-
   // Google Analytics (gtag.js)
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('consent', 'update', {
@@ -92,7 +85,6 @@ export const disableAnalytics = (): void => {
       ad_user_data: 'denied',
       ad_personalization: 'denied',
     });
-    console.log('❌ Google Analytics consent denied');
   }
 
   // Google Tag Manager
@@ -100,7 +92,6 @@ export const disableAnalytics = (): void => {
     (window as any).dataLayer.push({
       event: 'cookie_consent_denied',
     });
-    console.log('❌ GTM event pushed');
   }
 };
 
